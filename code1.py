@@ -1,8 +1,9 @@
 import serial
 import time
 
+ardMod="/dev/cu.usbserial-10 "
 # Change 'COM3' to your actual Arduino port (e.g., '/dev/ttyUSB0' for Linux/Mac)
-ser = serial.Serial('/dev/cu.wchusbserial110', 9600, timeout=1)  
+ser = serial.Serial(ardMod, 9600, timeout=1)  
 time.sleep(2)  # Allow time for the connection to initialize
 
 print("Listening for IR signals from Arduino...")
